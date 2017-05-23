@@ -102,7 +102,6 @@ public class SolutionB {
         return true;
     }
 
-    // driver program to test above function
     public static void main(String args[]) {
         int[] sizes = {4, 8, 16, 32, 64, 126, 256, 512};
 
@@ -113,4 +112,3 @@ public class SolutionB {
         }
     }
 }
-// This code is contributed by Abhishek Shankhadhar
