@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e7ac9e6-b129-4a77-bdee-d9ded2e333fb" name="Default" comment="Adicionar duas soluções com backtrack para o problema propost">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Arquillian_JUnit_Release.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/program/BranchBoundA.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/program/BranchBoundB.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/T3AlgAvn/SolutionA$QueensProblem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/T3AlgAvn/SolutionA.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/T3AlgAvn/SolutionB.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/T3AlgAvn/Testes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/program/SolutionA.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/program/SolutionB.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Testes.java" afterPath="$PROJECT_DIR$/src/program/Testes.java" />
+    <list default="true" id="4e7ac9e6-b129-4a77-bdee-d9ded2e333fb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SolutionA.java" afterPath="$PROJECT_DIR$/src/program/BacktrackA.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SolutionB.java" afterPath="$PROJECT_DIR$/src/program/BacktrackB.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/T3AlgAvn.iml" afterPath="$PROJECT_DIR$/T3AlgAvn.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -754,7 +746,7 @@
       <workItem from="1495222180474" duration="724000" />
       <workItem from="1495469936863" duration="11538000" />
       <workItem from="1495564727572" duration="659000" />
-      <workItem from="1495649415249" duration="2178000" />
+      <workItem from="1495649415249" duration="2326000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <created>1495218203942</created>
@@ -777,16 +769,22 @@
       <option name="project" value="LOCAL" />
       <updated>1495482394558</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adicionar duas soluções com branch and bound para o problema propost">
+      <created>1495651830252</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1495651830252</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18468000" />
+    <option name="totallyTimeSpent" value="18616000" />
     <option name="showSpentTimeFromLastPost" value="true" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1234" height="1040" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -806,8 +804,8 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32745314" sideWeight="0.4386712" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263506" sideWeight="0.48977855" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32745314" sideWeight="0.4386712" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3263506" sideWeight="0.48977855" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26660988" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Time Tracking" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964224" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -829,7 +827,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit inicial" />
     <MESSAGE value="Adicionar duas soluções com backtrack para o problema propost" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionar duas soluções com backtrack para o problema propost" />
+    <MESSAGE value="Adicionar duas soluções com branch and bound para o problema propost" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionar duas soluções com branch and bound para o problema propost" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

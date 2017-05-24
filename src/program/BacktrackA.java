@@ -1,3 +1,5 @@
+package program;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -7,8 +9,8 @@ import java.util.List;
 /**
  * Created by douglas.leite on 19/05/2017.
  */
-public class SolutionA {
-    static class QueensProblem {
+public class BacktrackA {
+    public static class QueensProblem {
         int size;
         // Utilizando vetor para representar a matriz resultado:
         // Podemos fazer isso já que a regra de posicionamento das rainhas
@@ -16,9 +18,6 @@ public class SolutionA {
 
         // VETOR[i] = j --> MATRIZ[i][j]
         int[] res;
-
-        // Contador de tentativas na mesma posição
-        int[][] tries;
 
         // Contador de resultados localizados
         int results = 0;
@@ -29,7 +28,6 @@ public class SolutionA {
         QueensProblem(int s) {
             this.size = s;
             res = new int[s];
-            tries = new int[s][s];
             System.out.print("Tamanho do tabuleiro: " + size);
             //Começo da execução
             long startTime = System.currentTimeMillis();
@@ -55,14 +53,12 @@ public class SolutionA {
             return true;
         }
 
-        void resolve(int i) {
+        boolean resolve(int i) {
             //Só verifica se não achou x resultados.
-            if (results < size) {
+            if (results < 1) {
                 for (int j = 0; j < this.size; j++) {
-                    //if (tries[i][j] < Math.pow(2,size)) {
                     //Verifica se pode inserir uma rainha nessa posição (ij).
                     if (check(i, j)) {
-                        //tries[i][j] = 0;
                         //Se sim, insere ela.
                         res[i] = j;
                         //Se ela foi inserida na ultima coluna, então é uma solução completa.
@@ -76,12 +72,12 @@ public class SolutionA {
                         }
                         //Chama a solução para a próxima coluna.
                         resolve(i + 1);
-                    } else {
-                        //tries[i][j]++;
                     }
-                    //}
                 }
+            }else{
+                return false;
             }
+            return true;
         }
     }
 

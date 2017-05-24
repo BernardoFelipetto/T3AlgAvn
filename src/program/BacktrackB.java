@@ -1,8 +1,10 @@
+package program;
+
 /* Java program to solve N Queen Problem using
    backtracking */
-public class SolutionB {
+public class BacktrackB {
     int N;
-    SolutionB(int size){
+    BacktrackB(int size){
         N = size;
     }
 
@@ -106,7 +108,7 @@ public class SolutionB {
         int[] sizes = {4, 8, 16, 32, 64, 126, 256, 512};
 
         for (int size : sizes) {
-            SolutionB Queen = new SolutionB(size);
+            BacktrackB Queen = new BacktrackB(size);
 
             Queen.solveNQ(size);
         }
