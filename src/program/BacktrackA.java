@@ -28,7 +28,6 @@ public class BacktrackA {
         QueensProblem(int s) {
             this.size = s;
             res = new int[s];
-            System.out.print("Tamanho do tabuleiro: " + size);
             //Começo da execução
             long startTime = System.currentTimeMillis();
 
@@ -38,7 +37,7 @@ public class BacktrackA {
             long stopTime = System.currentTimeMillis();
             long elapsedTime = stopTime - startTime;
 
-            System.out.println("\nTempo de execução: " + elapsedTime + "ms");
+            System.out.println("\nTamanho:" + s + " -> Tempo de execução: " + elapsedTime + "ms\n");
         }
 
         boolean check(int x, int y) {
@@ -47,8 +46,11 @@ public class BacktrackA {
             for (int i = 0; i < x; i++) {
                 //Não está na mesma linha que uma rainha existente (y = j)
                 if (res[i] == y) return false;
+                //if (Math.abs(i - x) == Math.abs(res[i] - y)) return false;
                 //Não está na mesma diagonal que uma rainha existente (|i - x| = |j - y|)
-                if (Math.abs(i - x) == Math.abs(res[i] - y)) return false;
+                if ((res[i] - y) == (x - i)) return false;
+                //Não está na mesma diagonal que uma rainha existente (|i - x| = |j - y|)
+                if ((y - res[i]) == (x - i)) return false;
             }
             return true;
         }
@@ -74,7 +76,7 @@ public class BacktrackA {
                         resolve(i + 1);
                     }
                 }
-            }else{
+            } else {
                 return false;
             }
             return true;
@@ -83,7 +85,7 @@ public class BacktrackA {
 
     public static void main(String args[]) {
 
-        int[] sizes = {4, 8, 16, 32, 64, 126, 256, 512};
+        int[] sizes = {4, 8, 16, 32, 64};
 
         for (int size : sizes) {
             QueensProblem p = new QueensProblem(size);

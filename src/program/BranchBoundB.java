@@ -1,11 +1,14 @@
 package program;
 
+import java.util.Arrays;
+
 /**
  * Created by douglas.leite on 24/05/2017.
  */
 public class BranchBoundB {
 
     private static int results = 0;
+    int[] result;
 
     /***************************************************************************
      * Return true if queen placement q[n] does not conflict with
@@ -24,15 +27,16 @@ public class BranchBoundB {
      * Prints n-by-n placement of queens from permutation q in ASCII.
      ***************************************************************************/
     public static void printQueens(int[] q) {
-        int n = q.length;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (q[i] == j) System.out.print("Q ");
-                else System.out.print("* ");
-            }
-            System.out.println();
-        }
-        System.out.println();
+//        int n = q.length;
+//        for (int i = 0; i < n; i++) {
+//            for (int j = 0; j < n; j++) {
+//                if (q[i] == j) System.out.print("Q ");
+//                else System.out.print("* ");
+//            }
+//            System.out.println();
+//        }
+//        System.out.println();
+        System.out.print(Arrays.toString(q));
     }
 
 
@@ -40,6 +44,8 @@ public class BranchBoundB {
      *  Try all permutations using backtracking
      ***************************************************************************/
     public static void enumerate(int n) {
+        results = 0;
+
         int[] a = new int[n];
         enumerate(a, 0);
     }
@@ -61,16 +67,19 @@ public class BranchBoundB {
 
 
     public static void main(String[] args) {
-        int n = 64;
+        int[] n = {4, 8, 16, 32, 64};
         //Começo da execução
-        long startTime = System.currentTimeMillis();
 
-        enumerate(n);
+        for (int i = 0; i < n.length; i++) {
+            long startTime = System.currentTimeMillis();
 
-        //Fim da execução
-        long stopTime = System.currentTimeMillis();
-        long elapsedTime = stopTime - startTime;
+            enumerate(n[i]);
 
-        System.out.println("\nTempo de execução: " + elapsedTime + "ms");
+            //Fim da execução
+            long stopTime = System.currentTimeMillis();
+            long elapsedTime = stopTime - startTime;
+
+            System.out.println("\nTamanho - "+ n[i] +" -> Tempo de execução: " + elapsedTime + "ms\n");
+        }
     }
 }
